@@ -81,7 +81,7 @@ def simuler_deplacement(r, driver_id: str, nb_steps: int = 5, intervalle: float 
         time.sleep(intervalle)
 
 def envoyer_alerte(driver_id: str, nom: str, distance: float):
-    """Simule l'envoi d'une alerte (log console, en production : email/SMS/webhook)."""
+    """Simule l'envoi d'une alerte."""
     print(f"\n  ALERTE : {driver_id} ({nom}) est à {distance:.2f} km du centre de Paris !")
     print(f"  ALERTE  Il dépasse la zone de service ({ZONE_MAX_KM} km). Notification envoyée.\n")
 
