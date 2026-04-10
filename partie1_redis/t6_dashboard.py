@@ -28,7 +28,7 @@ def afficher_dashboard(r):
         print("  Aucun livreur actif en ce moment.")
 
     # Top 2 livreurs
-    print("\nTop 2 livreurs (par rating) :")
+    print("\nTop 2 livreurs :")
     top2 = r.zrevrange("drivers:rating", 0, 1, withscores=True)
     for i, (lid, score) in enumerate(top2, 1):
         nom       = r.hget(f"driver:{lid}", "nom")

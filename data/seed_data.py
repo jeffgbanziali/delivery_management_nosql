@@ -1,4 +1,7 @@
 from datetime import datetime, timezone
+import random
+
+
 
 # ── Livreurs de base ───────────────────────────────────
 LIVREURS = [
@@ -91,8 +94,10 @@ LIEUX_LIVRAISON = [
 ]
 
 POSITIONS_LIVREURS = [
-    {"id": "d1", "lon": 2.365, "lat": 48.862},
-    {"id": "d2", "lon": 2.378, "lat": 48.871},
-    {"id": "d3", "lon": 2.320, "lat": 48.920},
-    {"id": "d4", "lon": 2.400, "lat": 48.750},
+    {
+        "id": f"d{i}",
+        "lon": 2.35 + random.uniform(-0.05, 0.05),
+        "lat": 48.85 + random.uniform(-0.05, 0.05)
+    }
+    for i in range(1, 16)
 ]
